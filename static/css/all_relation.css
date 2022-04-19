@@ -1,0 +1,242 @@
+#sider-talker{
+
+        top: 440px;
+        left: 0;
+        position: fixed;
+        z-index: 7;
+        background-color: transparent;
+        display: block;
+
+    }
+
+    #sider-talker-background{
+        width: 100px;
+        position: relative;
+        border-radius: 6px;
+        overflow: hidden;
+        /*background: #f5f5f6;*/
+
+        top: 16px;
+    }
+
+    #sider-talker-icon{
+        border-radius:0 69px 69px 0 ;
+        border: 1px solid #fff;
+        background: #f2f2f3;
+        border-top: none;
+        width: 88px;
+        height: 55px;
+        box-shadow: 2px 2px 4px 0 #c1c1c1;
+        position: relative;
+        overflow: hidden;
+    }
+
+    #icon-doctor{
+
+        display: inline-block;
+        width: 44px;
+        height: 44px;
+        border-radius: 50px;
+        cursor: pointer;
+
+    }
+
+.input-group{
+        width: 400px;
+}
+
+.elem{
+        position:absolute;
+        cursor:pointer;
+        background-color: #fff;
+        width:350px;
+        height:500px;
+        left:-335px;
+        border-radius: 20px;
+        z-index:32;
+    }
+
+#disease_title {
+    margin-top: 10px;
+    margin-left: 20px;
+    background-color: #0c6f7b;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    width: 130px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#disease_box {
+    display: none;
+    margin-top: 25px;
+    margin-left: 30px;
+    width:300px;
+    height:420px;
+    overflow:scroll;
+}
+
+
+
+
+
+    .chat-container{
+            position: fixed;
+            top: 100px;
+            left: 40px;
+            z-index: 30;
+            height: 480px;
+            width: 330px;
+            border-radius: 10px;
+            border: 1px solid #f5f5f6;
+
+
+            display: flex;
+            flex-flow: column;
+            overflow: hidden;
+    }
+    .chat-header{
+        height: 45px;
+        width:100%;
+
+        border-radius: 10px 10px 0 0;
+        border-bottom: 1px solid #8a8a8a;
+        background: #f3f2f1;
+        display: flex;
+    }
+    div.doctor-name{
+        height: 20px;
+        margin-top: 15px;
+        margin-left: 110px;
+        color: #454545;
+        font-size: 14px;
+        font-weight: 550;
+        line-height: normal;
+    }
+    .icon-shrink{
+        cursor: pointer;
+
+        margin: 13px 7px 3px 0;
+        position: relative;
+        padding-left: 80px;
+    }
+    .shrink{
+        height: 20px;
+        width: 36px;
+    }
+    .content{
+        overflow-y: scroll; /* 是否对内容的上/下边缘进行裁剪。*/
+        overflow-x: hidden;
+        flex: 1;      /*flex 属性用于设置或检索弹性盒模型对象的子元素如何分配空间。*/
+        background-color: #f5f5f6;
+        min-height: 350px;
+        padding-bottom: 8px;
+    }
+    .content:hover::-webkit-scrollbar-thumb{
+        background:rgba(0,0,0,0.1);
+    }
+    .talk-box{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .left-message{
+        background-color: #e5e5f0;
+        color: #252423;
+        padding: 8px 10px;
+        max-width: 220px;
+        border-radius: 2px 8px 8px 8px;
+        margin-left: 8px;
+
+        font-size: 15px;
+        line-height: normal;
+
+    }
+
+    .right-message{
+        background-color: #fefeff;
+        color: #555;
+        float: right;
+        word-wrap: break-word !important;
+        padding: 8px 10px;
+        border-radius: 8px 2px 8px 8px;
+        margin-right: 8px;
+        max-width: 220px;
+        font-size: 15px;
+        line-height: normal;
+    }
+
+
+    .item{
+        margin-top: 15px;
+        display: flex;
+        width: 100%;
+    }
+    .item.item-right{
+        justify-content: flex-end;
+    }
+
+    .avatar img{
+        width: 42px;
+        height: 42px;
+        border-radius: 50px;
+        border: 1.8px solid #cdcdcd;
+    }
+    .input-area{
+        background-color: #fff;
+        color: #000;
+        width: 100%;
+        padding: 8px 0 9px 8px;
+        border-radius: 0 0 6px 6px;
+        /*min-height: 42px;*/
+        display: flex;
+    }
+
+
+  #send-text{
+    width: 100%;
+    padding: 5px;
+    min-height: 12px;
+    resize: none;
+    border: 1px solid #e6e6e6;
+    line-height: 22px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: '微软雅黑', Helvetica, sans-serif;
+    overflow: auto;
+    word-wrap: break-word;
+  }
+
+
+    .send-block{
+        width: 35px;
+        height: 32px;
+        margin: 10px;
+        margin-left: 5px;
+        cursor: pointer;
+        background-color: transparent;
+
+    }
+    .send-button{
+
+        height: 100%;
+        width: 100%;
+        cursor: pointer;
+
+    }
+
+    /* 设置滚动条的样式 */
+    ::-webkit-scrollbar {
+        width:10px;
+    }
+    /* 滚动槽 */
+    ::-webkit-scrollbar-track {
+        -webkit-box-shadow:inset006pxrgba(0,0,0,0.3);
+        border-radius:8px;
+    }
+    /* 滚动条滑块 */
+    ::-webkit-scrollbar-thumb {
+        border-radius:10px;
+        background:rgba(0,0,0,0);
+        -webkit-box-shadow:inset006pxrgba(0,0,0,0.5);
+    }
