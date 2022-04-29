@@ -19,7 +19,8 @@
         "机场": "南昌昌北国际机场、南昌瑶湖机场",
         "火车站": "南昌西站、南昌站、南昌东站（在建）、南昌南站（在建）等",
         "车牌代码": "赣A、赣M",
-        "地区生产总值": "6650.53 亿元(2021年)"
+        "地区生产总值": "6650.53 亿元(2021年)",
+        "img": "https://bkimg.cdn.bcebos.com/pic/d31b0ef41bd5ad6eddc4c713a6802edbb6fd536696bd?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg"
     },
     "relation": {
         "person": {},

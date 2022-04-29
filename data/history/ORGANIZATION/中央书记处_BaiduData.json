@@ -3,7 +3,8 @@
     "attributes": {
         "中文名": "中国共产党中央委员会书记处",
         "性质": "中共中央领导机构",
-        "简称": "中共中央书记处"
+        "简称": "中共中央书记处",
+        "img": "https://bkimg.cdn.bcebos.com/pic/7a899e510fb30f2442a7eca651c7c643ad4bd113a54e?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg"
     },
     "relation": {
         "person": {},

@@ -18,7 +18,8 @@
         "主要民族": "汉、满、蒙、回、藏",
         "主要宗教": "儒教、佛教、道教、天主教",
         "道路通行": "靠右行驶",
-        "地理位置": "亚洲东部、东临太平洋"
+        "地理位置": "亚洲东部、东临太平洋",
+        "img": "https://bkimg.cdn.bcebos.com/pic/b64543a98226cffc42d51cd5b7014a90f703eade?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg"
     },
     "relation": {
         "person": {},

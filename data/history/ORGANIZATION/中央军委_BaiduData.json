@@ -3,7 +3,8 @@
     "attributes": {
         "中文名": "中国共产党中央军事委员会",
         "负责人": "中国共产党中央军事委员会主席",
-        "简称": "中共中央军委或中央军委"
+        "简称": "中共中央军委或中央军委",
+        "img": "https://bkimg.cdn.bcebos.com/pic/203fb80e7bec54e7afd7c866b9389b504fc26a8b?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg"
     },
     "relation": {
         "person": {},

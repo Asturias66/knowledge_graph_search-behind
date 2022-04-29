@@ -9,7 +9,8 @@
         "定价": "20 元",
         "开本": "32 开",
         "装帧": "平装",
-        "ISBN": "9787506549387"
+        "ISBN": "9787506549387",
+        "img": "https://bkimg.cdn.bcebos.com/pic/d50735fae6cd7b89f41d77fc0d2442a7d9330e5f?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg"
     },
     "relation": {
         "person": {},

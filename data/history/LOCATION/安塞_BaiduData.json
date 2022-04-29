@@ -18,7 +18,8 @@
         "火车站": "延安站",
         "车牌代码": "陕J",
         "地区生产总值": "111.26 亿元(2020年)",
-        "人口": "163165人（截至2020年11月1日零时常住人口）"
+        "人口": "163165人（截至2020年11月1日零时常住人口）",
+        "img": "https://bkimg.cdn.bcebos.com/pic/10dfa9ec8a13632746e90e009f8fa0ec08fac7f9?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg"
     },
     "relation": {
         "person": {},

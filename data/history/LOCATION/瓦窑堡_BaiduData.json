@@ -7,7 +7,8 @@
         "门票价格": "瓦窑堡革命旧址门票1元",
         "著名景点": "历史遗址",
         "所属国家": "中国",
-        "所属城市": "陕西省延安市"
+        "所属城市": "陕西省延安市",
+        "img": "https://bkimg.cdn.bcebos.com/pic/d009b3de9c82d158c236ffda870a19d8bc3e4220?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg"
     },
     "relation": {
         "person": {},

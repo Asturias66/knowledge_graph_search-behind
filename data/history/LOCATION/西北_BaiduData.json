@@ -9,7 +9,8 @@
         "著名景点": "麦积山、莫高窟、西夏陵、大雁塔、天山等",
         "机场": "西安咸阳国际机场、兰州中川国际机场、西宁曹家堡国际机场等",
         "火车站": "西安站、兰州站、西宁站、银川站、乌鲁木齐站",
-        "主要民族": "汉族、回族、维吾尔族等"
+        "主要民族": "汉族、回族、维吾尔族等",
+        "img": "https://bkimg.cdn.bcebos.com/pic/91529822720e0cf3df6c4b400246f21fbf09aaf5?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg"
     },
     "relation": {
         "person": {},

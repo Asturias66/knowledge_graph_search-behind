@@ -18,7 +18,8 @@
         "机场": "南昌昌北国际机场、赣州黄金机场、上饶三清山机场、井冈山机场等",
         "火车站": "南昌站、南昌西站、鹰潭站、九江站、赣州西站、吉安西站等",
         "车牌代码": "赣A—赣M",
-        "地区生产总值": "29619.7 亿元(2021年)"
+        "地区生产总值": "29619.7 亿元(2021年)",
+        "img": "https://bkimg.cdn.bcebos.com/pic/5bafa40f4bfbfbedab6454f2fba0e036afc37831b1a4?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg"
     },
     "relation": {
         "person": {},

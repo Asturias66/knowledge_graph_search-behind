@@ -7,7 +7,8 @@
         "著名将领": "朱德、刘伯承、叶剑英、徐向前、王维舟等",
         "相关事件": "土地革命、反围剿、长征、黄麻起义等",
         "简称": "红军",
-        "起源地": "湖北黄安县（今红安县）"
+        "起源地": "湖北黄安县（今红安县）",
+        "img": "https://bkimg.cdn.bcebos.com/pic/9f2f070828381f307270cd5ba3014c086f06f0d3?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg"
     },
     "relation": {
         "person": {},

@@ -3,7 +3,8 @@
     "attributes": {
         "名称": "湘南起义",
         "结果": "组建了湘南第一支农军",
-        "参战方兵力": "南昌起义军余部2000多人"
+        "参战方兵力": "南昌起义军余部2000多人",
+        "img": "https://bkimg.cdn.bcebos.com/pic/3ac79f3df8dcd100c2e5867a728b4710b9122f6b?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg"
     },
     "relation": {
         "person": {

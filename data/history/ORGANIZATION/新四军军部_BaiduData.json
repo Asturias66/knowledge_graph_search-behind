@@ -3,7 +3,8 @@
     "attributes": {
         "中文名": "新四军军部",
         "简介": "新四军领导机关的总称",
-        "目的": "为了抗击日本帝国"
+        "目的": "为了抗击日本帝国",
+        "img": "https://bkimg.cdn.bcebos.com/pic/1f178a82b9014a909fece243a3773912b21bee7a?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg"
     },
     "relation": {
         "person": {},

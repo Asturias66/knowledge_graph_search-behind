@@ -3,7 +3,8 @@
     "attributes": {
         "中文名": "战争",
         "外文名": "war",
-        "定义": "矛盾斗争表现的最高形式与最暴力手段"
+        "定义": "矛盾斗争表现的最高形式与最暴力手段",
+        "img": "https://bkimg.cdn.bcebos.com/pic/023b5bb5c9ea15ce62492be4b0003af33b87b2bc?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg"
     },
     "relation": {
         "person": {},

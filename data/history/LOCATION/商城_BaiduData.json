@@ -18,7 +18,8 @@
         "火车站": "商城站",
         "车牌代码": "豫S",
         "地区生产总值": "239.34 亿元(2020年)",
-        "人口": "45.95万人（2020年11月1日零时常住人口）"
+        "人口": "45.95万人（2020年11月1日零时常住人口）",
+        "img": "https://bkimg.cdn.bcebos.com/pic/2fdda3cc7cd98d1001e98ba48e75af0e7bec54e73a59?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg"
     },
     "relation": {
         "person": {},

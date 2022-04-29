@@ -20,7 +20,8 @@
         "方言": "陕北方言、关中方言、晋语",
         "特产": "狗头枣、洛川苹果、黄米、绿豆",
         "小吃": "碗托、洋芋檫檫、钱钱饭",
-        "高等院校": "延安大学、榆林学院"
+        "高等院校": "延安大学、榆林学院",
+        "img": "https://bkimg.cdn.bcebos.com/pic/0b46f21fbe096b630cf421300e338744eaf8ace5?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg"
     },
     "relation": {
         "person": {},

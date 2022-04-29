@@ -4,7 +4,8 @@
         "中文名": "红二",
         "种类": "牌类游戏",
         "玩家人数": "四名",
-        "牌源": "2 副牌"
+        "牌源": "2 副牌",
+        "img": "https://bkimg.cdn.bcebos.com/pic/cf1b9d16fdfaaf51ea72c0498f5494eef11f7ab6?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg"
     },
     "relation": {
         "person": {},

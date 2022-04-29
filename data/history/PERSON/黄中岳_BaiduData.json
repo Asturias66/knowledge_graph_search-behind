@@ -1,6 +1,8 @@
 {
     "introduction": "黄中岳，现任大安市月亮泡镇党委副书记、镇人民政府镇长。",
-    "attributes": {},
+    "attributes": {
+        "img": ""
+    },
     "relation": {
         "person": {},
         "location": {},

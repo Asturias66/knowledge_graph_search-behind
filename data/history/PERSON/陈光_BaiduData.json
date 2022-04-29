@@ -3,7 +3,8 @@
     "attributes": {
         "中文名": "陈光",
         "国籍": "中国",
-        "政治面貌": "中共党员"
+        "政治面貌": "中共党员",
+        "img": "https://bkimg.cdn.bcebos.com/pic/1b4c510fd9f9d72abd2a4644db2a2834349bbb19?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg"
     },
     "relation": {
         "person": {},

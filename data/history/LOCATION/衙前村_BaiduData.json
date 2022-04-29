@@ -3,7 +3,8 @@
     "attributes": {
         "中文名": "衙前村",
         "下辖": "村民小组24个",
-        "人口数量": "2923人"
+        "人口数量": "2923人",
+        "img": "https://bkimg.cdn.bcebos.com/pic/838ba61ea8d3fd1f0287f4883d4e251f94ca5ff1?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg"
     },
     "relation": {
         "person": {},

@@ -3,7 +3,8 @@
     "attributes": {
         "中文名": "中国工农红军第二十五军",
         "军长": "旷继勋",
-        "简称": "红二十五军"
+        "简称": "红二十五军",
+        "img": "https://bkimg.cdn.bcebos.com/pic/58ee3d6d55fbb2fb4acd4b1d484a20a44723dcde?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg"
     },
     "relation": {
         "person": {},

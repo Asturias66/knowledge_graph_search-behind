@@ -3,7 +3,8 @@
     "attributes": {
         "中文名": "晋冀鲁豫中央局",
         "书记": "邓小平",
-        "下辖地区": "太行区、冀南区、冀鲁豫区"
+        "下辖地区": "太行区、冀南区、冀鲁豫区",
+        "img": "https://bkimg.cdn.bcebos.com/pic/b64543a98226cffc50ea205bb1014a90f703ea13?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg"
     },
     "relation": {
         "person": {},

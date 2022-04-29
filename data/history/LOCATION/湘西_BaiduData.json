@@ -19,7 +19,8 @@
         "火车站": "吉首站、吉首东站、龙山北站、凤凰站",
         "车牌代码": "湘U",
         "地区生产总值": "725.11 亿元(2020年)",
-        "人口": "2488105人（第七次人口普查）"
+        "人口": "2488105人（第七次人口普查）",
+        "img": "https://bkimg.cdn.bcebos.com/pic/14ce36d3d539b6003d3f6e7fe950352ac75cb700?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg"
     },
     "relation": {
         "person": {},

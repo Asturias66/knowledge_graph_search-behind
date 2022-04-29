@@ -11,7 +11,8 @@
         "著名景点": "“九·一八”历史博物馆、大连老虎滩海洋公园、净月潭国家森林公园、太阳岛风景名胜区、呼伦贝尔草原",
         "机场": "沈阳桃仙国际机场、大连周水子国际机场、长春龙嘉国际机场、哈尔滨太平国际机场等",
         "火车站": "沈阳站、大连站、长春站、哈尔滨站等",
-        "车牌代码": "辽A、吉A、黑A、蒙G等"
+        "车牌代码": "辽A、吉A、黑A、蒙G等",
+        "img": "https://bkimg.cdn.bcebos.com/pic/d01373f082025aafe974d1fcf2edab64034f1a46?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg"
     },
     "relation": {
         "person": {},

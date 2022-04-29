@@ -3,7 +3,8 @@
     "attributes": {
         "中文名": "朱德",
         "国籍": "中国",
-        "民族": "汉"
+        "民族": "汉",
+        "img": "https://bkimg.cdn.bcebos.com/pic/8601a18b87d6277f9e2f7f47ad680830e924b8995609?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg"
     },
     "relation": {
         "person": {

@@ -18,7 +18,8 @@
         "火车站": "汉口站",
         "车牌代码": "鄂A",
         "方言": "武汉话",
-        "高等学府": "华中科技大学同济医学院、武汉轻工大学、中国人民解放军海军工程大学、江汉大学等"
+        "高等学府": "华中科技大学同济医学院、武汉轻工大学、中国人民解放军海军工程大学、江汉大学等",
+        "img": "https://bkimg.cdn.bcebos.com/pic/b999a9014c086e061d95ee3c20426cf40ad162d95d3b?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg"
     },
     "relation": {
         "person": {},

@@ -3,7 +3,8 @@
     "attributes": {
         "中文名": "中央执行委员会",
         "实质": "执行机构",
-        "简介": "中国共产党中央委员会的前身"
+        "简介": "中国共产党中央委员会的前身",
+        "img": "https://bkimg.cdn.bcebos.com/pic/d53f8794a4c27d1e1fe00d9f19d5ad6edcc438a2?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg"
     },
     "relation": {
         "person": {},

@@ -131,12 +131,6 @@ class HistoryGraph:
         organization = self.getNodesFromAllFile('data/history/ORGANIZATION')
         date = self.getNodesFromAllFile('data/history/DATE')
 
-        # print(len(person))
-        # print(len(event))
-        # print(len(law))
-        # print(len(location))
-        # print(len(organization))
-        # print(len(date))
 
         person_extra = []
         event_extra = []

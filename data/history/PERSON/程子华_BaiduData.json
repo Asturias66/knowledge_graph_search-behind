@@ -5,7 +5,8 @@
         "国籍": "中国",
         "民族": "汉族",
         "毕业院校": "黄埔军校武汉分校",
-        "性别": "男"
+        "性别": "男",
+        "img": "https://bkimg.cdn.bcebos.com/pic/3c6d55fbb2fb43166d2252bc21e8512309f7915275eb?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg"
     },
     "relation": {
         "person": {},

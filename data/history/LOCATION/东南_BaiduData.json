@@ -15,7 +15,8 @@
         "人口数量": "约 5.1 亿",
         "著名景点": "武夷山、福州三坊七巷、厦门鼓浪屿",
         "车牌代码": "沪、浙、闽、琼、皖、粤、苏、赣、桂",
-        "方言": "粤语、赣语、吴语、闽语、官话、客家语、壮语、琼语"
+        "方言": "粤语、赣语、吴语、闽语、官话、客家语、壮语、琼语",
+        "img": "https://bkimg.cdn.bcebos.com/pic/6a600c338744ebf8ede51466d6f9d72a6159a7d7?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg"
     },
     "relation": {
         "person": {},

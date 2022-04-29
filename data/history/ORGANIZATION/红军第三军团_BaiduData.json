@@ -3,7 +3,8 @@
     "attributes": {
         "中文名": "中国工农红军第三军团",
         "建立时间": "1930年6月",
-        "组成": "湘鄂赣红5军、红8军合编而成"
+        "组成": "湘鄂赣红5军、红8军合编而成",
+        "img": "https://bkimg.cdn.bcebos.com/pic/3c6d55fbb2fb43169e097a202fa4462309f7d352?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg"
     },
     "relation": {
         "person": {},

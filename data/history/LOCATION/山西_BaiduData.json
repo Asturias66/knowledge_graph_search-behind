@@ -18,7 +18,8 @@
         "机场": "太原武宿国际机场、运城张孝机场、长治王村机场、大同云冈机场等",
         "火车站": "太原站、太原南站、大同站等",
         "车牌代码": "晋A—晋M",
-        "地区生产总值": "22590.16 亿元(2021年)"
+        "地区生产总值": "22590.16 亿元(2021年)",
+        "img": "https://bkimg.cdn.bcebos.com/pic/b812c8fcc3cec3fdfc03bce952d8c33f8794a4c28955?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg"
     },
     "relation": {
         "person": {},

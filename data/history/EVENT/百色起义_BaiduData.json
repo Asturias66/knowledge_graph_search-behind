@@ -3,7 +3,8 @@
     "attributes": {
         "名称": "百色起义",
         "参战方": "国共两党",
-        "结果": "共产党获胜，建立苏维埃政府"
+        "结果": "共产党获胜，建立苏维埃政府",
+        "img": "https://bkimg.cdn.bcebos.com/pic/72f082025aafa40f1d187631a564034f79f0197b?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg"
     },
     "relation": {
         "person": {

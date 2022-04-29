@@ -18,7 +18,8 @@
         "机场": "呼和浩特白塔国际机场、鄂尔多斯伊金霍洛国际机场等",
         "火车站": "呼和浩特站、包头站、鄂尔多斯站、二连站",
         "车牌代码": "蒙A – 蒙M",
-        "地区生产总值": "20514.2 亿元(2021年)"
+        "地区生产总值": "20514.2 亿元(2021年)",
+        "img": "https://bkimg.cdn.bcebos.com/pic/5882b2b7d0a20cf431ad1f5ff2595c36acaf2fdd33a8?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg"
     },
     "relation": {
         "person": {},

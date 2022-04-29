@@ -8,7 +8,8 @@
         "景点级别": "国家AAAA级旅游景区",
         "著名景点": "莲花峰、白银坨、蚕姑坨",
         "开放时间": "06:00~17:00",
-        "门票价格": "80.00元"
+        "门票价格": "80.00元",
+        "img": "https://bkimg.cdn.bcebos.com/pic/4034970a304e251f9da974a4ad86c9177f3e530b?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg"
     },
     "relation": {
         "person": {},

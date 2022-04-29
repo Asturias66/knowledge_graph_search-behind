@@ -9,7 +9,8 @@
         "著名景点": "鼓浪屿、武夷山、西湖、乌镇、庐山、井冈山",
         "机场": "福州长乐国际机场、杭州萧山国际机场、南昌昌北国际机场",
         "火车站": "福州南站、杭州东站、南昌西站",
-        "车牌代码": "闽、浙、赣"
+        "车牌代码": "闽、浙、赣",
+        "img": "https://bkimg.cdn.bcebos.com/pic/0df431adcbef76094b360250838cb4cc7cd98c1030f8?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg"
     },
     "relation": {
         "person": {},

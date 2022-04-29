@@ -19,7 +19,8 @@
         "机场": "太原武宿国际机场、太原尧城机场",
         "火车站": "太原站、太原南站、太原东站、太原北站、太原西站等",
         "车牌代码": "晋A",
-        "地区生产总值": "5121.61 亿元(2021年)"
+        "地区生产总值": "5121.61 亿元(2021年)",
+        "img": "https://bkimg.cdn.bcebos.com/pic/4b90f603738da97739129c680f19ef198618367a4515?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg"
     },
     "relation": {
         "person": {},

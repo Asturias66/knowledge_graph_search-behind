@@ -7,7 +7,8 @@
         "投用时间": "1985年6月",
         "开放时间": "08:30-17:00",
         "气候条件": "亚热带季风气候",
-        "景点级别": "AAAAA级"
+        "景点级别": "AAAAA级",
+        "img": "https://bkimg.cdn.bcebos.com/pic/f636afc379310a55b3199cc2dd0b54a98226cffcbafd?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg"
     },
     "relation": {
         "person": {},

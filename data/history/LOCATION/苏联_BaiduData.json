@@ -33,7 +33,8 @@
         "国家结构": "联邦制",
         "指导思想": "马克思列宁主义",
         "时   区": "UTC+2~UTC+12",
-        "全称": "苏维埃社会主义共和国联盟"
+        "全称": "苏维埃社会主义共和国联盟",
+        "img": "https://bkimg.cdn.bcebos.com/pic/4a36acaf2edda3cc85fffcc40fe93901213f923f?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg"
     },
     "relation": {
         "person": {},

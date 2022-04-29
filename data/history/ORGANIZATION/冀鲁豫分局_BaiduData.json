@@ -1,7 +1,8 @@
 {
     "introduction": "冀鲁豫分局成立于1943年11月。",
     "attributes": {
-        "中文名": "冀鲁豫分局"
+        "中文名": "冀鲁豫分局",
+        "img": ""
     },
     "relation": {
         "person": {},

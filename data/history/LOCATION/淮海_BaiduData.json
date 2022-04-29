@@ -16,7 +16,8 @@
         "火车站": "徐州站、连云港站、邳州东站、曲阜站、滕州东站等",
         "沿海城市": "日照、连云港",
         "历史名人": "孔子、墨子、庄子、刘邦、项羽",
-        "著名学府": "中国矿业大学、江苏师范大学等"
+        "著名学府": "中国矿业大学、江苏师范大学等",
+        "img": "https://bkimg.cdn.bcebos.com/pic/8ad4b31c8701a18bf5a9b3cb902f07082938fef0?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg"
     },
     "relation": {
         "person": {},

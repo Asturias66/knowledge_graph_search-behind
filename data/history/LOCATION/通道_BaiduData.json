@@ -7,7 +7,8 @@
         "功能": "存储图像的色彩资料、存储和创建选区、抠图",
         "通道分类": "Alpha通道、 颜色通道、复合通道等",
         "工具操作": "选区工具、绘图工具、图像调整工具等",
-        "释义": "选择区域的映射"
+        "释义": "选择区域的映射",
+        "img": "https://bkimg.cdn.bcebos.com/pic/35a85edf8db1cb13d9b40c97d754564e93584b50?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg"
     },
     "relation": {
         "person": {},

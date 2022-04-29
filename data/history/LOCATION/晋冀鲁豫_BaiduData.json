@@ -5,7 +5,8 @@
         "晋": "山西",
         "鲁": "山东",
         "冀": "河北",
-        "豫": "河南"
+        "豫": "河南",
+        "img": "https://bkimg.cdn.bcebos.com/pic/b7003af33a87e9501110f32f15385343fbf2b469?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg"
     },
     "relation": {
         "person": {},

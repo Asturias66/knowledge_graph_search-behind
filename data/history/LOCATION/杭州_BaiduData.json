@@ -19,7 +19,8 @@
         "机场": "杭州萧山国际机场",
         "火车站": "杭州站、杭州东站、杭州南站、杭州西站等",
         "车牌代码": "浙A",
-        "地区生产总值": "18109 亿元(2021年)"
+        "地区生产总值": "18109 亿元(2021年)",
+        "img": "https://bkimg.cdn.bcebos.com/pic/0dd7912397dda144892860b1bdb7d0a20cf4868b?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg"
     },
     "relation": {
         "person": {},

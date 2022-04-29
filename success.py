@@ -1,6 +1,8 @@
 # search
 import re
 
+import requests
+
 from neo_db.config import graph, HISTORY_LIST
 
 # getSelectionFromGraph
@@ -183,9 +185,14 @@ def getSpaceRecallDetailFromGraph(space):
 
 
 
-
-
-
+# getMovieFromRequest
+def getMovieFromRequest(keyword):
+    s = requests.session()
+    url = "https://movie.douban.com/j/search_subjects?type=movie&tag=" + keyword + "&sort=recommend&page_limit=100&page_start=0"
+    header = {
+        "User-Agent": "Mozilla/5.0(Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36 Edg/100.0.1185.50"}
+    resp = s.get(url, headers=header).json()
+    return resp
 
 
 
@@ -202,7 +209,7 @@ def getTimeRecallDetailFromGraph(time):
         for timeLine_item in eval(i["properties(n)['时间线']"]):
             print("timeLine_item:",timeLine_item)
             # print("timeLine_item的长度：",len(timeLine_item))
-            timeLine_item[-2] = timeLine_item[-2].split(':')[1]
+            timeLine_item[3] = timeLine_item[3].split(':')[1]
             json_data.append(timeLine_item)
     return json_data
 
@@ -328,16 +335,16 @@ def get_json_dataForAttribute(data,subject):
         # print("for i in data:")
         # print(i['properties(n)'])
         for key,value in i['properties(n)'].items():
-            # print("key:",key+'_'+"value:",value)
-            if key != '时间线':
-                d.append(value+"_"+key)
+            print("key:",key+'_'+"value:",value)
+            if key != '时间线' and key !='img':
+                d.append(value+"___"+key)
                 d = list(set(d))
 
     print("d=list(set(d)):", d)
     name_dict = {}
     count = 0
     for j in d:
-        j_array = j.split("_")
+        j_array = j.split("___")
 
         data_item = {}
         name_dict[j_array[0]] = count
@@ -364,7 +371,94 @@ def get_json_dataForAttribute(data,subject):
     # print("json_data:", json_data)
     return json_data
 
+# getKeyWordsWithEvents
+def getKeyWordsWithEventsFromGraph(keyword):
+    data = graph.run(
+        "match(p {name:'%s'}) -[r]->(n) return p.name,r.name,n.name,labels(p),labels(n) union match(p) -[r]->(n{name:'%s'}) return p.name,r.name,n.name,labels(p),labels(n)" % (
+        keyword, keyword)
+    )
+    data = list(data)
+    # print("getkeywordFromGraph返回的结果:", data)
 
+    json_data = {'nodes': [], "links": []}
+    d = []
+
+    for i in data:
+        # print("for i in data:")
+        # print(i["p.name"], i["r.name"], i["n.name"],i["labels(p)"][0],i["labels(n)"][0])
+
+        d.append(i['p.name'] + "_" + i["labels(p)"][0])
+        d.append(i['n.name'] + "_" + i["labels(n)"][0])
+
+        d = list(set(d))
+    print("没加event的d:", d)
+    # # 给event加关系
+    eventData = None
+    for j in d:
+        # label = j.split("_")[1]
+        if j.split("_")[1] == 'HistoryEvent' and j.split("_")[0] != keyword:
+            print("j.split(_)[0]:",j.split("_")[0])
+            eventData = graph.run(
+                "match(p {name:'%s'}) -[r]->(n) return p.name,r.name,n.name,labels(p),labels(n) union match(p) -[r]->(n{name:'%s'}) return p.name,r.name,n.name,labels(p),labels(n)"
+                % (j.split("_")[0], j.split("_")[0])
+            )
+
+            eventData = list(eventData)
+            print("加关系for循环里面的eventData:", eventData)
+
+            for event_node in eventData:
+                event_node_item = event_node['p.name'] + "_" + event_node["labels(p)"][0]
+                if event_node_item not in d:
+                    d.append(event_node_item)
+                event_node_item = event_node['n.name'] + "_" + event_node["labels(n)"][0]
+                if event_node_item not in d:
+                    d.append(event_node_item)
+                d = list(set(d))
+
+            for event_item in eventData:
+                link_item = {}
+                link_item['source'] = event_item['p.name']
+                link_item['target'] = event_item['n.name']
+                link_item['category'] = event_item["r.name"]
+                link_item['label'] = event_item['r.name']
+
+                json_data['links'].append(link_item)
+
+    print("加event的d:", d)
+    print("eventData:",eventData)
+
+    name_dict = {}
+    count = 0
+    for j in d:
+        j_array = j.split("_")
+
+        data_item = {}
+        name_dict[j_array[0]] = count
+
+        # data_item['id'] = count
+        count += 1
+        data_item['id'] = j_array[0]
+        # print("data_item['id']:", data_item['id'])
+        data_item['label'] = j_array[0]
+        data_item['category'] = HISTORY_LIST[j_array[1]]
+
+
+        # print("data_item['category']:", data_item['category'])
+        json_data['nodes'].append(data_item)
+    for i in data:
+        link_item = {}
+
+        link_item['source'] = i['p.name']
+        link_item['target'] = i['n.name']
+        link_item['category'] = i["r.name"]
+        link_item['label'] = i['r.name']
+
+        json_data['links'].append(link_item)
+
+
+
+
+    return json_data
 
 
 # getkeyword
@@ -402,11 +496,11 @@ def get_json_dataForKeywords(data):
         # data_item['id'] = count
         count += 1
         data_item['id'] = j_array[0]
-        print("data_item['id']:",data_item['id'])
+        # print("data_item['id']:",data_item['id'])
         data_item['label'] = j_array[0]
         data_item['category'] = HISTORY_LIST[j_array[1]]
 
-        # data_item['category'] = CA_LIST[j_array[1]]
+
         # print("data_item['category']:", data_item['category'])
         json_data['nodes'].append(data_item)
     for i in data:
@@ -417,9 +511,17 @@ def get_json_dataForKeywords(data):
         link_item['category'] = i["r.name"]
         link_item['label'] = i['r.name']
 
+        # 获取imgUrl
+        imgUrl = graph.run(
+            "MATCH (n{name:'%s'}) RETURN properties(n)['img']" % (i[2])
+        )
+        for i in imgUrl:
+
+            link_item['img'] = i[0]
+
+
         json_data['links'].append(link_item)
 
 
 
-    # print("json_data:", json_data)
     return json_data

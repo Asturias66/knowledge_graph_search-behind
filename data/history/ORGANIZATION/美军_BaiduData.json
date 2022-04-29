@@ -7,7 +7,8 @@
         "最高统帅": "美国总统",
         "简称": "United States Army",
         "部队构成": "海军、陆军、空军、海军陆战队、海岸警卫队、太空军",
-        "官方名称": "美利坚合众国武装部队"
+        "官方名称": "美利坚合众国武装部队",
+        "img": "https://bkimg.cdn.bcebos.com/pic/0823dd54564e9258d109c18285c8c658ccbf6c81e00f?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg"
     },
     "relation": {
         "person": {},

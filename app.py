@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request, jsonify
-
 from inteligent_QA.chatbot_graph import ChatBotGraph
 from neo_db.query_graph import queryAllrelation
 from success import getkeywordFromGraph,\
@@ -10,14 +9,16 @@ from success import getkeywordFromGraph,\
                     getTimeRecallDetailFromGraph,\
                     getMoreKeyWordFromGraph,\
                     getSpaceRecallDetailFromGraph,\
-                    getSelectionFromGraph
+                    getSelectionFromGraph,\
+                    getKeyWordsWithEventsFromGraph,\
+                    getMovieFromRequest
 
-
+from inteligent_QA.KBQA import QAnalysis
 
 
 
 app = Flask(__name__)
-# handler = ChatBotGraph()  # neo4j
+
 # faiss_engine  # transform
 
 
@@ -43,7 +44,8 @@ def search_everything():
 
     # transform the query
     # user_question
-
+    # 怕这个函数调用太慢的话可以把handler放到外面去
+    handler = ChatBotGraph()  # neo4j
     answer = handler.chat_main(user_question)
     json_data = answer
     print("json_data:", json_data)
@@ -174,13 +176,38 @@ def getMoreKeyWord():
 # getSelection
 @app.route('/getSelection', methods=['GET', 'POST'])
 def getSelection():
-    # keyword = request.args.get('keyword')
-    # print("要查询的keyword：",keyword)
     json_data = getSelectionFromGraph()
     print("json_data:", json_data)
     return jsonify(json_data)
 
+# getKeyWordsWithEvents
+@app.route('/getKeyWordsWithEvents', methods=['GET', 'POST'])
+def getKeyWordsWithEvents():
+    keyword = request.args.get('keyword')
+    print("要查询的keyword：",keyword)
+    json_data = getKeyWordsWithEventsFromGraph(keyword)
+    print("json_data:", json_data)
+    return jsonify(json_data)
 
+
+# getMovie
+@app.route('/getMovie', methods=['GET', 'POST'])
+def getMovie():
+    keyword = request.args.get('keyword')
+    print("要查询的keyword：",keyword)
+    json_data = getMovieFromRequest(keyword)
+    print("json_data:", json_data)
+    return jsonify(json_data)
+
+
+# queryAnswer
+@app.route('/queryAnswer', methods=['GET', 'POST'])
+def queryAnswer():
+    question = request.args.get('question')
+    print("要查询的question：",question)
+    answer = QAnalysis(question)
+    print("answer:", answer)
+    return jsonify(answer)
 
 
 if __name__ == '__main__':

@@ -26,7 +26,8 @@
         "国际域名缩写": ".中国、.cn（港：.hk，澳：.mo，台：.tw）",
         "道路通行": "靠右行驶（香港、澳门靠左行驶）",
         "执政党": "中国共产党",
-        "国家宪法": "《中华人民共和国宪法》"
+        "国家宪法": "《中华人民共和国宪法》",
+        "img": "https://bkimg.cdn.bcebos.com/pic/f9198618367adab44aedde018e9fa41c8701a18b4e17?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg"
     },
     "relation": {
         "person": {},

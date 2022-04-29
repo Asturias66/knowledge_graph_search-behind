@@ -3,14 +3,14 @@
     "attributes": {
         "中文名": "中国左翼作家联盟",
         "简称": "左联",
-        
         "创办刊物": "《萌芽月刊》《拓荒者》等",
-        "领导机构": "常务委员会"
+        "领导机构": "常务委员会",
+        "img": "https://bkimg.cdn.bcebos.com/pic/d043ad4bd11373f0e6fad2b8a60f4bfbfaed04cb?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg"
     },
     "relation": {
         "person": {
-         "旗帜人物": "鲁迅"
-         },
+            "旗帜人物": "鲁迅"
+        },
         "location": {},
         "date": {
             "成立时间": "1930年3月"

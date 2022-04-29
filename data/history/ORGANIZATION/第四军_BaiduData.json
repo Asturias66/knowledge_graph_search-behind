@@ -3,7 +3,8 @@
     "attributes": {
         "中文名": "国民革命军第四军",
         "时期": "军政时期",
-        "前身": "广东军队建国粤军第一师"
+        "前身": "广东军队建国粤军第一师",
+        "img": "https://bkimg.cdn.bcebos.com/pic/bd3eb13533fa828b627775bbf21f4134970a5a16?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg"
     },
     "relation": {
         "person": {},

@@ -4,7 +4,8 @@
         "中文名": "海军",
         "外文名": "navy",
         "类别": "军事组织",
-        "组成": "船只、飞机、人员、海军机构"
+        "组成": "船只、飞机、人员、海军机构",
+        "img": "https://bkimg.cdn.bcebos.com/pic/37d12f2eb9389b504fc2ee0bb567f2dde71190efc012?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg"
     },
     "relation": {
         "person": {},

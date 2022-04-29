@@ -3,7 +3,8 @@
     "attributes": {
         "中文名": "中国大陆地区",
         "外文名": "Chinese mainland region",
-        "别名": "中国大陆、大陆地区"
+        "别名": "中国大陆、大陆地区",
+        "img": ""
     },
     "relation": {
         "person": {

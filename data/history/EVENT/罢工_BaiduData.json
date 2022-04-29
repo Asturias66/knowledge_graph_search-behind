@@ -4,7 +4,8 @@
         "中文名": "罢工行动",
         "外文名": "Strikes",
         "简称": "罢工",
-        "原因": "工人为了表示抗议"
+        "原因": "工人为了表示抗议",
+        "img": "https://bkimg.cdn.bcebos.com/pic/203fb80e7bec54e711fd766eb9389b504fc26aa8?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg"
     },
     "relation": {
         "person": {},

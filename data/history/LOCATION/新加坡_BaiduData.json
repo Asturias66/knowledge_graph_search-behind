@@ -29,7 +29,8 @@
         "国际机场": "新加坡樟宜国际机场、实里达机场",
         "火车站": "兀兰火车关卡",
         "港口": "吉宝港口、裕廊港、巴西班让码头",
-        "誉称": "花园城市"
+        "誉称": "花园城市",
+        "img": "https://bkimg.cdn.bcebos.com/pic/242dd42a2834349b0b4465bdc7ea15ce36d3be43?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg"
     },
     "relation": {
         "person": {},

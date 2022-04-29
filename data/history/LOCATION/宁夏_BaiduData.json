@@ -18,7 +18,8 @@
         "机场": "银川河东国际机场、中卫沙坡头机场、固原六盘山机场",
         "火车站": "银川站、石嘴山站等",
         "车牌代码": "宁A-宁E",
-        "地区生产总值": "3920.55 亿元(2020年)"
+        "地区生产总值": "3920.55 亿元(2020年)",
+        "img": "https://bkimg.cdn.bcebos.com/pic/3b87e950352ac65c103890c57fa2a5119313b07e1c7e?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg"
     },
     "relation": {
         "person": {},

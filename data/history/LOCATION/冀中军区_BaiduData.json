@@ -3,7 +3,8 @@
     "attributes": {
         "中文名": "冀中军区",
         "定义": "晋察冀军区所辖的一个二级军区",
-        "政治委员": "王平"
+        "政治委员": "王平",
+        "img": "https://bkimg.cdn.bcebos.com/pic/cf1b9d16fdfaaf5148a07319825494eef11f7ad1?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg"
     },
     "relation": {
         "person": {

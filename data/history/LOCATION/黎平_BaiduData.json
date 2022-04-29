@@ -19,7 +19,8 @@
         "机场": "黎平机场",
         "火车站": "从江站",
         "车牌代码": "贵H",
-        "地区生产总值": "103.85 亿元(2021年)"
+        "地区生产总值": "103.85 亿元(2021年)",
+        "img": "https://bkimg.cdn.bcebos.com/pic/b8389b504fc2d56294df89a8ee1190ef77c66c9b?x-bce-process=image/resize,m_lfit,w_536,limit_1/format,f_jpg"
     },
     "relation": {
         "person": {},

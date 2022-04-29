@@ -3,7 +3,8 @@
     "attributes": {
         "中文名": "军校",
         "外文名": "Military Academy",
-        "职责": "培养部队高级将领"
+        "职责": "培养部队高级将领",
+        "img": ""
     },
     "relation": {
         "person": {},
