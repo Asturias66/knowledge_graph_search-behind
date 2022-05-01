@@ -1,16 +1,7 @@
 # coding:utf-8
 
-import json
-import urllib.request
-import urllib.parse
-from lxml import etree
-import hanlp
-import re
-from time import sleep
-from sys import argv
 
-from pyhanlp import HanLP
-from tqdm import tqdm
+import hanlp
 from py2neo import Graph
 graph = Graph('http://localhost:7474/', auth=("neo4j", "123456"))
 
@@ -184,17 +175,4 @@ def QClassify(question,tok,ctb,ner):
         print("多意图问题")
     print("返回answer:",answer)
     return answer
-
-
-#
-# if __name__ == '__main__':
-#     # 问答
-#     while (True):
-#         question = input('用户问题：')
-#         answer = QAnalysis(question)
-
-    # #
-    # answer = QAnalysis(argv[1])  # sys.argv[0]表示当前运行的.py文件的名字，sys.arg[1]才是从外面传进来的参数，如果有需要，可以增加sys.arg[2]，sys.arg[3].......，以此类推
-    # print(answer)
-
 

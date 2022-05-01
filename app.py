@@ -1,7 +1,5 @@
-from flask import Flask, render_template, request, jsonify
-from inteligent_QA.chatbot_graph import ChatBotGraph
-from neo_db.query_graph import queryAllrelation
-from success import getkeywordFromGraph,\
+from flask import Flask, request, jsonify
+from neo_db.query_graph import getkeywordFromGraph,\
                     getAttributeFromGraph,\
                     getPeopleFromGraph,\
                     getChildEventFromGraph,\
@@ -13,13 +11,11 @@ from success import getkeywordFromGraph,\
                     getKeyWordsWithEventsFromGraph,\
                     getMovieFromRequest
 
-from inteligent_QA.KBQA import QAnalysis
+from chatbot_graph.question_answer import QAnalysis
 
 
 
 app = Flask(__name__)
-
-# faiss_engine  # transform
 
 
 def after_request(response):
@@ -28,43 +24,6 @@ def after_request(response):
     response.headers['Access-Control-Allow-Headers'] = 'Content-Type,Authorization'
     return response
 
-
-# 路由
-@app.route('/', methods=['GET', 'POST'])
-@app.route('/index', methods=['GET', 'POST'])
-def index(name=None):
-    return render_template('index.html', name=name)
-
-
-# 智能问答
-@app.route('/search_everything', methods=['GET', 'POST'])
-def search_everything():
-    user_question = request.args.get('user_question')
-    print("我提的问题是：", user_question)
-
-    # transform the query
-    # user_question
-    # 怕这个函数调用太慢的话可以把handler放到外面去
-    handler = ChatBotGraph()  # neo4j
-    answer = handler.chat_main(user_question)
-    json_data = answer
-    print("json_data:", json_data)
-    return jsonify(json_data)
-
-
-@app.route('/get_all_relation', methods=['GET', 'POST'])
-def get_all_relation():
-    return render_template('all_relation.html')
-
-
-# 展示出这个疾病所有的关系
-@app.route('/searchAllrelation', methods=['GET', 'POST'])
-def searchAllrelation():
-    name = request.args.get('name')
-    print("要查询的疾病：", name)
-    json_data = queryAllrelation(str(name))
-    print("json_data:", json_data)
-    return jsonify(json_data)
 
 # getkeyword
 @app.route('/getkeyword', methods=['GET', 'POST'])
