@@ -4,18 +4,19 @@
 import os
 import json
 from py2neo import Graph,Node
+# graph = Graph('http://localhost:7474/', auth=("neo4j", "123456"))
 
 
 
 class HistoryGraph:
     # 配置ip地址、端口、用户名、密码连接Neo4j
     def __init__(self):
-
-        self.g = Graph(
-            host="localhost",  # neo4j 搭载服务器的ip地址，ifconfig可获取到
-            http_port=7474,  # neo4j 服务器监听的端口号
-            user="neo4j",  # 数据库user name，如果没有更改过，应该是neo4j
-            password="123456")
+        self.g = Graph('http://localhost:7474/', auth=("neo4j", "123456"))
+        # self.g = Graph(
+        #     host="localhost",  # neo4j 搭载服务器的ip地址，ifconfig可获取到
+        #     http_port=7474,  # neo4j 服务器监听的端口号
+        #     user="neo4j",  # 数据库user name，如果没有更改过，应该是neo4j
+        #     password="123456")
 
     def getRelationFromFile(self,filePath):
         # 获取read_path下的所有文件名称（顺序读取的）
@@ -117,19 +118,13 @@ class HistoryGraph:
         date = []
         location = []
 
-        # person = self.getNodesFromAllFile('data/JsonCenter/person')
-        # document = self.getNodesFromAllFile('data/JsonCenter/document')
-        # event = self.getNodesFromAllFile('data/JsonCenter/event')
-        # relic = self.getNodesFromAllFile('data/JsonCenter/relic')
-        # time = self.getNodesFromAllFile('data/JsonCenter/time')
-        # location = self.getNodesFromAllFile('data/JsonCenter/location')
 
-        person = self.getNodesFromAllFile('data/history/PERSON')
-        event = self.getNodesFromAllFile('data/history/EVENT')
-        law = self.getNodesFromAllFile('data/history/LAW')
-        location = self.getNodesFromAllFile('data/history/LOCATION')
-        organization = self.getNodesFromAllFile('data/history/ORGANIZATION')
-        date = self.getNodesFromAllFile('data/history/DATE')
+        person = self.getNodesFromAllFile('../data/history/PERSON')
+        event = self.getNodesFromAllFile('../data/history/EVENT')
+        law = self.getNodesFromAllFile('../data/history/LAW')
+        location = self.getNodesFromAllFile('../data/history/LOCATION')
+        organization = self.getNodesFromAllFile('../data/history/ORGANIZATION')
+        date = self.getNodesFromAllFile('../data/history/DATE')
 
 
         person_extra = []
@@ -139,42 +134,42 @@ class HistoryGraph:
         organization_extra = []
 
 
-        rel_person_person, rel_person_event, rel_person_location, rel_person_date, rel_person_organization, person0, event0, location0, date0, organization0 = self.getRelationFromFile('data/history/PERSON')
+        rel_person_person, rel_person_event, rel_person_location, rel_person_date, rel_person_organization, person0, event0, location0, date0, organization0 = self.getRelationFromFile('../data/history/PERSON')
         person_extra.append(person0)
         event_extra.append(event0)
         location_extra.append(location0)
         date_extra.append(date0)
         organization_extra.append(organization0)
         rel_event_person, rel_event_event, rel_event_location, rel_event_date, rel_event_organization, person0, event0, location0, date0, organization0 = self.getRelationFromFile(
-            'data/history/EVENT')
+            '../data/history/EVENT')
         person_extra.append(person0)
         event_extra.append(event0)
         location_extra.append(location0)
         date_extra.append(date0)
         organization_extra.append(organization0)
         rel_law_person, rel_law_event, rel_law_location, rel_law_date, rel_law_organization, person0, event0, location0, date0, organization0 = self.getRelationFromFile(
-            'data/history/LAW')
+            '../data/history/LAW')
         person_extra.append(person0)
         event_extra.append(event0)
         location_extra.append(location0)
         date_extra.append(date0)
         organization_extra.append(organization0)
         rel_location_person, rel_location_event, rel_location_location, rel_location_date, rel_location_organization, person0, event0, location0, date0, organization0 = self.getRelationFromFile(
-            'data/history/LOCATION')
+            '../data/history/LOCATION')
         person_extra.append(person0)
         event_extra.append(event0)
         location_extra.append(location0)
         date_extra.append(date0)
         organization_extra.append(organization0)
         rel_organization_person, rel_organization_event, rel_organization_location, rel_organization_date, rel_organization_organization, person0, event0, location0, date0, organization0 = self.getRelationFromFile(
-            'data/history/ORGANIZATION')
+            '../data/history/ORGANIZATION')
         person_extra.append(person0)
         event_extra.append(event0)
         location_extra.append(location0)
         date_extra.append(date0)
         organization_extra.append(organization0)
         rel_date_person, rel_date_event, rel_date_location, rel_date_date, rel_date_organization, person0, event0, location0, date0, organization0 = self.getRelationFromFile(
-            'data/history/DATE')
+            '../data/history/DATE')
         person_extra.append(person0)
         event_extra.append(event0)
         location_extra.append(location0)

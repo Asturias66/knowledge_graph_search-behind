@@ -179,7 +179,7 @@ def getSpaceRecallDetailFromGraph(space):
         for timeLine_item in eval(i["properties(n)['时间线']"]):
             print("timeLine_item:", timeLine_item)
             # print("timeLine_item的长度：",len(timeLine_item))
-            timeLine_item[-2] = timeLine_item[-2].split(':')[1]
+            timeLine_item[3] = timeLine_item[3].split(':')[1]
             json_data.append(timeLine_item)
     return json_data
 
