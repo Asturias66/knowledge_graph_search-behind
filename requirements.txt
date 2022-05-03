@@ -1,0 +1,5 @@
+Flask==2.1.1
+hanlp==2.1.0b27
+Pillow==9.1.0
+py2neo==2021.2.3
+requests==2.27.1

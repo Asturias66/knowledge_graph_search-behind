@@ -1,3 +1,8 @@
+import os
+from PIL import Image
+
+import glob
+import json
 from flask import Flask, request, jsonify
 from neo_db.query_graph import getkeywordFromGraph,\
                     getAttributeFromGraph,\
@@ -9,7 +14,10 @@ from neo_db.query_graph import getkeywordFromGraph,\
                     getSpaceRecallDetailFromGraph,\
                     getSelectionFromGraph,\
                     getKeyWordsWithEventsFromGraph,\
-                    getMovieFromRequest
+                    getMovieFromRequest,\
+                    getIdentityTipsFromRequest,\
+                    getRandomOptions,\
+                    getMoreTest
 
 from chatbot_graph.question_answer import QAnalysis
 
@@ -58,6 +66,23 @@ def getAttribute():
     subject = request.args.get('subject')
     print("要查询的subject：", subject)
     json_data = getAttributeFromGraph(str(subject))
+    print("json_data:", json_data)
+    return jsonify(json_data)
+
+
+#getOptions
+@app.route('/getOptions', methods=['GET', 'POST'])
+def getOptions():
+    keyword = request.args.get('keyword')
+    print("要查询的keyword：", keyword)
+    json_data = getRandomOptions(str(keyword))
+    print("json_data:", json_data)
+    return jsonify(json_data)
+
+#getNew
+@app.route('/getNew', methods=['GET', 'POST'])
+def getNew():
+    json_data = getMoreTest('data/history/PERSON')
     print("json_data:", json_data)
     return jsonify(json_data)
 
@@ -168,7 +193,57 @@ def queryAnswer():
     print("answer:", answer)
     return jsonify(answer)
 
+def getPhotos(filePath):
+# 获取图片
+    # 获取read_path下的所有文件名称（顺序读取的）
+    files = os.listdir(filePath)
+    photoData = []
+    for file_name in files:
+        # print('file_name:',file_name)
+        # 读取单个文件内容
+        file_object = open(filePath + '/' + file_name, 'r', encoding='utf-8')
+        read_data = file_object.read()  # 读取数据
+
+        dataJson = json.loads(read_data)
+        # print('dataJson:',dataJson)
+        if dataJson['attributes']['img'] != '':
+            # print('dataJson:',dataJson['attributes']['img'])
+            photoData.append(dataJson['attributes']['img'])
+            photoData.append(file_name.split('_')[0])
+
+    print("photoData:",photoData)
+
+def changePhotoSize(file, outdir, width, height):
+    for file_item in glob.glob(file):  # 图片所在的目录
+        imgFile = Image.open(file_item,"r")
+        try:
+            newImage = imgFile.resize((width, height), Image.BILINEAR)
+            newImage.save(os.path.join(outdir, os.path.basename(file)))
+        except Exception as e:
+            print(e)
+
+# getIdentityTips
+@app.route('/getIdentityTips', methods=['GET', 'POST'])
+def getIdentityTips():
+    keyword = request.args.get('keyword')
+    print("要查询的keyword：",keyword)
+    json_data = getIdentityTipsFromRequest(keyword)
+    print("json_data:", json_data)
+    return jsonify(json_data)
+
 
 if __name__ == '__main__':
+    # getPhotos('data/history/PERSON')
+
+    # path = "data/img"  # 图片所在的文件夹路径
+    # for maindir, subdir, file_name_list in os.walk(path):
+    #     print(file_name_list)
+    #     for file_name in file_name_list:
+    #         image = os.path.join(maindir, file_name)  # 获取每张图片的路径
+    #         file = Image.open(image)
+    #         out = file.resize((450, 450), Image.ANTIALIAS)  # 以高质量修改图片尺寸为（400，48）
+    #         out.save(image)  # 以同名保存到原路径
+
     print("app")
     app.run(debug=False, host='0.0.0.0', port=80)
+

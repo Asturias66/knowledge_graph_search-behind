@@ -1,5 +1,7 @@
+import json
+import os
 import requests
-
+import random
 from neo_db.config import graph, HISTORY_LIST
 
 # getSelectionFromGraph
@@ -431,6 +433,56 @@ def getKeyWordsWithEventsFromGraph(keyword):
     return json_data
 
 
+# getIdentityTips
+def getIdentityTipsFromRequest(keyword):
+    data = graph.run(
+        "MATCH (n:HistoryPerson1{name:'%s'}) RETURN properties(n)" % (keyword)
+    )
+    data = list(data)
+    print("getAttributeFromGraph返回的结果:", data)
+    json_data = {}
+    for i in data:
+        # print("for i in data:")
+        # print(i['properties(n)'])
+        for key, value in i['properties(n)'].items():
+            # print("key:", key + '_' + "value:", value)
+            if key != '时间线' and key != 'img' and keyword not in value:
+                json_data[key] = value
+
+    return json_data
+
+# getRandomOptions
+def getRandomOptions(keyword):
+    data = graph.run("MATCH (n:HistoryPerson1) RETURN n.name")
+    data = list(data)
+    personNameList = []
+    for i in data:
+        personNameList.append(i['n.name'])
+    # print("personNameList:",personNameList)
+
+    options = random.sample(personNameList,3)
+    options.append(keyword)
+    # print("options:", options)
+    random.shuffle(options)
+    # print("乱序options:", options)
+    answerList = []
+    idList = ['A','B','C','D']
+    for item in idList:
+        answerDict = {}
+        answerDict['id'] = item
+
+        answerList.append(answerDict)
+    for i in range(0,len(answerList)):
+        answerList[i]['content'] = options[i]
+    print("answerList:", answerList)
+    json_data = {}
+    json_data['answerList'] = answerList
+    return json_data
+
+
+
+
+
 # getkeyword
 def getkeywordFromGraph(keyword):
     data = graph.run(
@@ -440,6 +492,7 @@ def getkeywordFromGraph(keyword):
     print("getkeywordFromGraph返回的结果:",data)
 
     return get_json_dataForKeywords(data)
+
 
 
 def get_json_dataForKeywords(data):
@@ -486,12 +539,41 @@ def get_json_dataForKeywords(data):
             "MATCH (n{name:'%s'}) RETURN properties(n)['img']" % (i[2])
         )
         for i in imgUrl:
-
             link_item['img'] = i[0]
 
-
         json_data['links'].append(link_item)
-
-
-
     return json_data
+
+# getMoreTest
+def getMoreTest(filePath):
+    # filePath = '../data/history/PERSON'
+    files = os.listdir(filePath)
+    personNameData = []
+    json_data = {}
+    for file_name in files:
+        # print('file_name:',file_name)
+        # 读取单个文件内容
+        file_object = open(filePath + '/' + file_name , 'r', encoding='utf-8')
+        read_data = file_object.read()  # 读取数据
+
+        dataJson = json.loads(read_data)
+        # print('dataJson:',dataJson)
+        if dataJson['attributes']['img'] != '':
+            personNameData.append(file_name.split('_')[0])
+    print("personNameData:", personNameData)
+    choosed_person = random.choice(personNameData)
+    json_data['name'] = choosed_person
+    with open(filePath + '/' + choosed_person + '_BaiduData.json', 'r', encoding='utf-8') as f:
+        read_data = f.read()
+        dataJson = json.loads(read_data)
+        json_data['img'] = dataJson['attributes']['img']
+
+    json_data['answerList'] = getRandomOptions(choosed_person)
+
+    print("json_data:", json_data)
+    return json_data
+
+
+if __name__ == '__main__':
+    getMoreTest()
+    # getRandomOptions('孙中山')
